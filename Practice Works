@@ -1,0 +1,296 @@
+def topla(*args):
+  topla = 0
+  for sayi in args:
+    topla += sayi
+  return topla
+
+
+print(topla(2,3,4,5,6,7,8,9,0,0,5,4,5,6,7))
+print(topla())
+print(topla(2,3))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+A = list()
+B = list()
+for sayı in range(70,271):
+  if(sayı%7 == 0 and sayı%2 == 0 ):
+    A.append(sayı)
+  elif(sayı%9 == 0 and sayı%2 != 0):
+    B.append(sayı)
+sonuc = sum(A)*sum(B) 
+print(sonuc)     
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+a = 5 
+m = 70 
+V_list = list()
+K_list = list()
+
+for t in range(1,11):
+  V_list.append(a*t)
+
+for  v in range(1,11):
+  K_list.append((1/2)*m*v**2)  
+
+for i in range(1,11):
+  print("t = {}  V = {}  K_enerji = {}".format(i,V_list[i],K_list[i]))
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  print("PİZZA_SİPARİSİ")
+kucuk = 10
+orta = 20 
+buyuk = 30
+tutar = 0 
+siparisler = list()
+ad_soyad = input("Ad_Soyad: ")
+adres = input("Adres: ")
+siparis_adeti = int(input("Adet: "))
+for siparis in range(siparis_adeti):
+  print("{} adet siparisiniz alınıyor".format(siparis_adeti))
+
+secim = input("Pizza boyu: ")
+if(secim == "kucuk"):
+  siparisler.append("kucuk")
+  tutar += kucuk
+elif(secim == "orta"):
+  siparisler.append("orta")  
+  tutar += orta
+elif(secim == "buyuk"):
+  siparisler.append("buyuk")
+  tutar += buyuk
+print("SİPARİS ALINDI.... FİS VERİLİYOR....")
+
+print("Ad Soyad: {}  Secim: {}  Adres: {}  Tutar: {}".format(ad_soyad,siparis_adeti,adres,tutar))
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+def fib(n):
+  fib_sonuc = list()
+  a,b = 0,1
+  while a < n:
+    fib_sonuc.append(a)
+    a,b = b,a+b
+    return fib_sonuc 
+print(fib(100))    
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+def tek_cift(*sayılar):
+  tek,cift = list(),list()
+
+  for sayı in sayılar:
+    if(sayı%2 == 0):
+      cift.append(sayı)
+
+    elif(sayı%2 != 0 ):
+      tek.append(sayı)  
+  return cift,tek
+
+print(tek_cift(546,5665,3465,23454,6533,2435,25634,67,234654365,436))
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+def fibon(n):
+  fibon_res = list()
+  a,b = 0,1 
+  while a < n:
+    fibon_res.append(a)
+    a,b = b,a+b 
+  return fibon_res
+print(fibon(100))   
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+def hesaplama(n = 0,*ustler):
+  def faktoriyel(n):
+    sonuc = 1 
+    for a in range(n,n+1):
+      sonuc*= 1 
+    return sonuc 
+  return[[faktoriyel(n),ust,faktoriyel(n**ust)]for ust in ustler]
+print(hesaplama(6,7,8,9))  
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+print("---- For döngüsü ----")
+a = 10 #m/s^2
+m = 10 #kg
+for t in range(0,11):
+ v = a*t
+ Ek = (1/2*m*v**2)
+ print("t: {} saniye, Ek = {} Joule".format(t,Ek))
+print("---- While döngüsü ----")
+t = 0
+while(t <= 10):
+ v = a*t
+ Ek = (1/2*m*v**2)
+ print("t: {} saniye, Ek = {} Joule".format(t,Ek))
+ t += 1
+ 
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+ girdi = input("Girdi: ")
+a_A = 0
+b_B = 0
+for karakter in girdi:
+ if(karakter == "a" or karakter == "A"):
+ a_A += 1
+
+ elif(karakter == "b" or karakter == "B"):
+ b_B += 1
+
+print("""{} içinde:
+a veya A sayısı: {}
+b veya B sayısı: {} vardır.""".format(girdi,a_A,b_B))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ilk_donem_ort = 0
+ikinci_donem_ort = 0
+for donem in range(1,3):
+
+ sinav_toplam = 0
+
+ for sinav in range(1,4):
+ ders_notu = float(input("{}.dönem {}.not: ".format(donem,
+ sinav)))
+ sinav_toplam += ders_notu
+
+ if(donem == 1):
+ ilk_donem_ort = sinav_toplam/3
+
+ elif(donem == 2):
+ ikinci_donem_ort = sinav_toplam/3
+
+yil_sonu_ort = (ilk_donem_ort + ikinci_donem_ort)/2
+print("""
+İlk dönem Ortalaması: {},
+İkinci dönem Ortalaması: {}
+Yıl sonu ortalaması: {}
+""".format(ilk_donem_ort,ikinci_donem_ort,yil_sonu_ort))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+toplam = 0
+carpim = 1
+for hak in range(1,6):
+ print("{}\n {}.girdi hakkı \n{}".format(15*"-",hak,15*"-"))
+ girdi = float(input("Girdi: "))
+ if(girdi >= 20 and girdi <= 70):
+ print("{}\n-Girdi Kabul Edildi!-\n{}".format(20*"*",20*"*"))
+ toplam += girdi
+ carpim *= girdi
+ else:
+ print("{}\n-Girdi Kabul Edilmedi!-\n{}".format(20*"*",20*"*"))
+
+print("Girdilerin Toplamı: {}, Çarpımı: {}".format(toplam,carpim))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+toplam = 0
+carpim = 1
+for hak in range(1,6):
+ print("{}\n {}.girdi hakkı \n{}".format(15*"-",hak,15*"-"))
+ girdi = float(input("Girdi: "))
+ if(girdi >= 20 and girdi <= 70):
+ print("{}\n-Girdi Kabul Edildi!-\n{}".format(20*"*",20*"*"))
+ toplam += girdi
+ carpim *= girdi
+ else:
+ print("{}\n-Girdi Kabul Edilmedi!-\n{}".format(20*"*",20*"*"))
+
+print("Girdilerin Toplamı: {}, Çarpımı: {}".format(toplam,carpim))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+toplam = 0
+carpim = 1
+hak = 5 #hakkı her defasında bir eksilteceğiz.
+while(True):
+ if(hak == 0):
+ print("Girdilerin Toplamı: {}, Çarpımı: {}".format(toplam,carpim))
+ break
+ else:
+ print("{}\n {}.girdi hakkı \n{}".format(15*"-",5-hak+1,15*"-"))
+ hak -= 1
+ girdi = float(input("Girdi: "))
+ if(girdi >= 20 and girdi <= 70):
+ print("{}\n-Girdi Kabul Edildi!-\n{}".format(20*"*",20*"*"))
+ toplam += girdi
+ carpim *= girdi
+ else:
+ print("{}\n-Girdi Kabul Edilmedi!-\n{}".format(20*"*",20*"*"))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+g = 6.67*10**-11
+m_1 = float(input("m_1(kg): "))
+m_2 = float(input("m_2(kg): "))
+for r in range(25,275,25):
+F_12 = g*(m_1*m_2)/(r**2)
+print("m_1: {}kg, m_2: {}kg, r:{}metre, F_12=F_21: {} Newton".format(m_1,
+m_2,
+r,
+F_12))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+a = float(input("a: "))
+b = float(input("b: "))
+c = float(input("c: "))
+disk = b**2 - 4*a*c
+print("{}x**2 + {}x + {} = 0 Denklemi:".format(a,b,c))
+if(disk > 0):
+ print("İki adet reel kökü vardır!")
+ kok_1 = (-b + disk**0.5)/(2*a)
+ kok_2 = (-b - disk**0.5)/(2*a)
+ print("Kök_1 : {}, Kök_2 : {}".format(kok_1,kok_2))
+
+elif(disk == 0):
+ print("Bir adet reel kökü vardır!")
+ kok_1 = (-b + disk**0.5)/(2*a
+ print("Kök_1 : {}".format(kok_1))
+else:
+ print("Reel kökü yoktur!")
+ kok_1 = complex(-b,-(-1*disk)**0.5)/(2*a)
+ kok_2 = complex(-b,(-1*disk)**0.5)/(2*a)
+ print("Kök_1 : {}, Kök_2 : {}".format(kok_1,kok_2))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+tek = list()
+cift = list()
+tek_cift = list()
+for sayi in range(1,76):
+
+ if(sayi%2 == 0):
+ cift.append(sayi)
+
+ elif(sayi%2 != 0):
+ tek.append(sayi)
+print("Tek sayılar:\n{}\n".format(tek))
+print("Çift sayılar:\n{}\n".format(cift))
+tek_cift = [tek,cift]
+print("Tek ve Çift sayılar:\n{}".format(tek_cift))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+from math import *
+def P(n,r):
+ result = factorial(n)/(factorial(n-r)*factorial(r))
+ return result
+def C(n,r):
+ result = factorial(n)/factorial(n-r)
+ return result
+print(P(25,2),C(25,2))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+from math import *
+def sinus_function(first,last):
+ result = list()
+ for rad in range(first,last+10,10):
+ result.append(sin(radians(rad)))
+ return result
+print(sinus_function(0,90))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
